@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        display(1);
+        //display(1);
         displayPrice(returnTxtViewAsInt(getTxtView(R.id.quantity_text_view)) * 4);
     }
 
@@ -53,12 +53,25 @@ public class MainActivity extends AppCompatActivity {
         TextView quantityTextView = getTxtView(R.id.quantity_text_view);
         int val = returnTxtViewAsInt(quantityTextView);
         if (isIncrement) {
-            val++;
+            if (val <3)
+            {
+                val = 3;
+            }
+            else {
+                val++;
+            }
         }
         else {
-            val--;
+            if (val >=2) {
+                val--;
+            }
+            else
+            {
+                val = 1;
+            }
         }
         quantityTextView.setText("" + val);
+        displayPrice(returnTxtViewAsInt(getTxtView(R.id.quantity_text_view)) * 4);
     }
 
 
