@@ -23,7 +23,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="64dp"
             android:layout_height="wrap_content"
             android:text="+"
             android:onClick="incrementQuantity"
@@ -43,7 +43,7 @@
             />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="64dp"
             android:layout_height="wrap_content"
             android:text="-"
             android:onClick="decrementQuantity"
@@ -84,5 +84,23 @@
         android:textAllCaps="true"
         android:layout_marginLeft="16dp"
         android:onClick="submitOrder"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rollback"
+        android:onClick="rollbackImage"
+
+        />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/glideImage"
+        android:src="@drawable/android_logo"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
         />
 </LinearLayout>
